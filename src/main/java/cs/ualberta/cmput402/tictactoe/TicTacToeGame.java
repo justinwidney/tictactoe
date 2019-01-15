@@ -18,6 +18,10 @@ public class TicTacToeGame {
         board = new Board();
     }
 
+    public void resetBoard(){
+        board = new Board();
+    }
+
     public void promptNextPlayer(){
         switch(board.getCurrentPlayer()){
             case X:
