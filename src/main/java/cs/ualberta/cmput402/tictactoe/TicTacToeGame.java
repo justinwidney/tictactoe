@@ -30,6 +30,11 @@ public class TicTacToeGame {
         }
     }
 
+    public void printScore(){
+        System.out.println("X wins: " + score[0]  + "    O wins: " + score[1] +
+                    "    Ties:" + score[2]+ "");
+    }
+
     public void playGame(){
         Scanner keyboardScanner = new Scanner(System.in);
 
@@ -57,8 +62,7 @@ public class TicTacToeGame {
 	}
         board.printBoard();
         System.out.println("Player " + board.getWinner() + " has won the game!");
-        System.out.println("X wins: " + score[0]  + "    O wins: " + score[1] +
-			"    Ties:" + score[2]+ "");
+        printScore();
     }
 
     public static void main(String args[]){
