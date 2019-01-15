@@ -34,6 +34,14 @@ public class TicTacToeGame {
 
         while (board.getWinner() == null){
             board.printBoard();
+
+            // If all moves have been played with no winner result game in tie
+
+            if(board.getMoveCount() == 9 ){
+                System.out.println("Players have tied the game.");
+                return;
+            }
+
             promptNextPlayer();
             String line = keyboardScanner.nextLine();
             String input[] = line.split(",");
