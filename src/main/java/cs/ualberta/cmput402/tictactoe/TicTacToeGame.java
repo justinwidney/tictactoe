@@ -45,7 +45,9 @@ public class TicTacToeGame {
 
             if(board.getMoveCount() == 9 ){
                 System.out.println("Players have tied the game.");
-                return;
+                score[2] += 1;
+		printScore();
+		return;
             }
 
             promptNextPlayer();
