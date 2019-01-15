@@ -69,8 +69,24 @@ public class TicTacToeGame {
         printScore();
     }
 
+    public boolean promptNewGame() {
+        Scanner keyboardScanner = new Scanner(System.in);
+        System.out.println("Do you want to play another game (y/n)?");
+        String line = keyboardScanner.nextLine().toLowerCase();
+        if (line.contentEquals("y")) {
+            return true;
+        } else {
+            printScore();
+            return false;
+        }
+    }
+
     public static void main(String args[]){
         TicTacToeGame game = new TicTacToeGame();
         game.playGame();
+        while (game.promptNewGame()) {
+            game.resetBoard();
+            game.playGame();
+        }
     }
 }
