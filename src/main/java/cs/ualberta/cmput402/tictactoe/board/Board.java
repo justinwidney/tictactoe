@@ -11,6 +11,8 @@ public class Board {
     private Player currentPlayer;
     private Player winner;
     private Player board[][];
+    private int moveCount;
+
 
     public Board(){
         board = new Player[3][3];
@@ -42,6 +44,9 @@ public class Board {
             stringBuilder.append(getSymbol(board[row][col]));
             throw new InvalidMoveException(stringBuilder.toString());
         }else{
+
+            moveCount++;
+
             board[row][col] = currentPlayer;
 
             if (hasWon(row, col))
@@ -127,6 +132,8 @@ public class Board {
     public Player getPlayerAtPos(int row, int col){
         return board[row][col];
     }
+
+    public int getMoveCount() {return moveCount;}
 
 
 }
