@@ -42,8 +42,7 @@ public class TicTacToeGame {
             board.printBoard();
 
             // If all moves have been played with no winner result game in tie
-
-            if(board.getMoveCount() == 9 ){
+            if (board.getMoveCount() == 9){
                 System.out.println("Players have tied the game.");
                 score[2] += 1;
                 printScore();
@@ -61,7 +60,7 @@ public class TicTacToeGame {
             }
         }
 
-        if(board.getWinner() == Player.X){
+        if (board.getWinner() == Player.X){
             score[0] += 1;
         }
         else if (board.getWinner() == Player.O){
