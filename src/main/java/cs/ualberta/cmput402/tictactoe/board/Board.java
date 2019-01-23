@@ -22,6 +22,7 @@ public class Board {
     }
 
     private void initBoard(){
+        moveCount = 0;
         for (int i = 0; i < 3; i++)
             for(int j = 0; j < 3; j++)
                 board[i][j] = Player.NONE;
@@ -133,7 +134,9 @@ public class Board {
         return board[row][col];
     }
 
-    public int getMoveCount() {return moveCount;}
+    public int getMoveCount() {
+      return moveCount;
+    }
 
 
 }
