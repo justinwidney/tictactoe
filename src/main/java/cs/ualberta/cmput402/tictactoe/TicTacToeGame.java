@@ -32,7 +32,8 @@ public class TicTacToeGame {
 
     private void printScore(){
         System.out.println("X wins: " + score[0]  + "    O wins: " + score[1] +
-                    "    Ties:" + score[2]+ "");
+                    "    Ties:" + score[2] +
+                    "\nX losses: " + score[1]  + "    O losses: " + score[0]);
     }
 
     public void playGame(){
