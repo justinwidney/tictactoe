@@ -12,9 +12,10 @@ import java.util.Scanner;
 public class TicTacToeGame {
 
     private Board board;
-    private int[] score = {0,0,0};  // X wins, O wins, Ties
+    private int[] score;  // X wins, O wins, Ties
 
     public TicTacToeGame(){
+        score = new int[] {0,0,0};
         board = new Board();
     }
 
