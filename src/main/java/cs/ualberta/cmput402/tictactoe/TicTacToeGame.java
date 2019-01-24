@@ -78,15 +78,17 @@ public class TicTacToeGame {
         printScore();
     }
 
-    public boolean promptNewGame() {
-        Scanner keyboardScanner = new Scanner(System.in);
-        System.out.println("Do you want to play another game (y/n)?");
-        String line = keyboardScanner.nextLine().toLowerCase();
-        if (line.contentEquals("y")) {
-            return true;
-        } else {
-            printScore();
-            return false;
+    private boolean promptNewGame() {
+        while (true) {
+            Scanner keyboardScanner = new Scanner(System.in);
+            System.out.println("Do you want to play another game (y/n)?");
+            String line = keyboardScanner.nextLine().toLowerCase();
+            if (line.contentEquals("y")) {
+                return true;
+            } else if (line.contentEquals("n")) {
+                printScore();
+                return false;
+            }
         }
     }
 
